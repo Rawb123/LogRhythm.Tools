@@ -227,7 +227,7 @@
     "UrlScan": {
         "Name": "UrlScan",
         "Optional": true,
-        "Message": "",
+        "Message": "Input API key",
         "HasKey": true,
         "Fields": {
             "PublicScans": {
@@ -239,6 +239,32 @@
         }
     },
 
+    "BlueCat" : {
+        "Name": "BlueCat",
+        "Optional": true,
+        "Message": "",
+        "HasKey": true,
+        "Fields": {
+            "clientid": {
+                "Prompt": "Client ID",
+                "Hint": "Example: f8da285a-3816-438e-825a-928a4bed1bd3",
+                "InputCmd": "Get-Guid",
+                "FallThru": false
+            },
+            "clientsecret": {
+                "Prompt": "Client Secret",
+                "Hint": "Example: f8da285a-3816-438e-825a-928a4bed1bd3",
+                "InputCmd": "Get-Guid",
+                "FallThru": false
+            },
+            "DNSEdgeInstance": {
+                "Prompt": "FQDN for DNS Edge Instance - Provide 'api-' and the full domain. Do not include any slashes or url paths",
+                "Hint": "Example: 'api-<DNS.edge.url>', or 'api-company.edge.bluec.at'",
+                "InputCmd": "InputEdgeInstance",
+                "FallThru": false
+            }
+        }
+    },
 
     "SecretServer": {
         "Name": "Secret Server",
